@@ -1,9 +1,12 @@
 body {
-    background: green;
+    background: white;
 }
 c-bio__label {
     text-transform: uppercase;
     color: #abadb1;
     font-size: .625rem;
     line-height: .875rem;
+}
+.detalhe {
+    text-align: center;
 }
