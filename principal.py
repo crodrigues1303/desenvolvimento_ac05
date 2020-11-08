@@ -17,8 +17,6 @@ def fnurmagomedov():
 def adesanya():
     return render_template("adesanya.html")
 
-
-
 @app.route("/usman")
 def usman():
     return render_template("usman.html")
@@ -33,6 +31,18 @@ def miocic():
 
 @app.route("/volknovski")
 def volknovski():
-    return render_template("volknovski.html")
+    return render_template("volknovski.html") 
+
+@app.route("/atleta")
+def atleta():
+    return render_template("index.html") 
+
+@app.route("/redes-sociais")
+def redes():
+    return render_template("index.html") 
+
+@app.route("/sobre")
+def sobre():
+    return render_template("sobre.html") 
 
 app.run(debug=True)

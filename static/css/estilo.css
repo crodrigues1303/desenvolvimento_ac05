@@ -128,3 +128,28 @@ label.copyright {
     margin-bottom: 25px;
     text-align: center;
 }
+
+.sobre {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+     column-count: 2;
+    margin-top: 20px;
+    margin-bottom: 60px; 
+    border-style: inset;
+    
+}
+
+.txt-sobre {
+    font-family: "KlavikaWebCondensed","Arial Narrow",Arial,sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.img-sobre {
+    width: 100%;
+    height: 100%;
+}
+
+.txt-sobre-2 {
+    padding: 10px;
+}
