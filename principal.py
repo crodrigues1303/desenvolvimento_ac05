@@ -10,7 +10,29 @@ def index():
     return render_template("index.html")
 
 @app.route("/fnurmagomedov")
-def cadastro():
+def fnurmagomedov():
     return render_template("fnurmagomedov.html")
+
+@app.route("/adesanya")
+def adesanya():
+    return render_template("adesanya.html")
+
+
+
+@app.route("/usman")
+def usman():
+    return render_template("usman.html")
+
+@app.route("/jones")
+def jones():
+    return render_template("jones.html")
+
+@app.route("/miocic")
+def miocic():
+    return render_template("miocic.html")
+
+@app.route("/volknovski")
+def volknovski():
+    return render_template("volknovski.html")
 
 app.run(debug=True)
