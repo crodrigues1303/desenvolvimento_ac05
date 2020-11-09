@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="/static/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilo.css" />
+    <title>Aposta</title>
+</head>
+<body>
+    <div class="linksHeader">
+        <div>
+            <a href="atleta" class="links" id="atletas" onmouseover="mouseAtletaOver();" onmouseout="mouseAtletaOut();">ATLETAS</a>
+        </div>
+        <div>
+            <a href="redes-sociais" class="links" id="redes" onmouseover="mouseRedesOver();" onmouseout="mouseRedesOut();">REDES SOCIAL</a>
+        </div>
+        <div>
+            <a href="/" class="links" id="ufc" onmouseover="mouseUfcOver();" onmouseout="mouseUfcOut();">UFC</a>
+        </div>
+        <div>
+            <a href="aposta" class="links" id="aposta" onmouseover="mouseApostaOver();" onmouseout="mouseApostaOut();">APOSTA</a>
+        </div>
+        <div >
+            <a href="sobre" class="links"  id="sobre" onmouseover="mouseSobreOver();" onmouseout="mouseSobreOut();">SOBRE</a>
+        </div>
+    </div> 
+    <center><h1>Faça sua aposta!!!</h1><br>
+        <table border="0" align="center">
+            <form name="aposta" action="" method="POST">
+            <tr>
+                <td><label>Nome:</label></td>
+                <td><input type="text" maxlength="100" name="nome" required/></td>
+            </tr>
+            <tr>
+                <td><label>Telefone:</label></td>
+                <td><input type="number" maxlength="11"  name="telefone" required></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label>Valor:</label></td>
+                <td><input type="number" maxlength="9" name="valor" required/></td>
+            </tr>
+        </table></br>
+        <tr>
+            <td><label><b>Lutador:</b></label></td></td>
+            <td><SELECT NAME = "Lutador" SIZE=1>
+                <OPTION>Selecione
+                <OPTION>Alexander Volkanovski
+                <OPTION>Israel Adesanya
+                <OPTION>Jon Jones
+                <OPTION>Kamaru Usman
+                <OPTION>Khabib Nurmagomedov
+                <OPTION>Stipe Miočić
+            </SELECT></td></tr></br></br>
+        </tr>
+        <input type="submit" value="APOSTAR =)"/>
+        <input type="reset" value="Limpar"/><br/>
+        </form>    
+    </center>
+</body>
+</html>

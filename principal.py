@@ -45,4 +45,8 @@ def redes():
 def sobre():
     return render_template("sobre.html") 
 
+@app.route("/aposta")
+def aposta():
+    return render_template("aposta.html") 
+
 app.run(debug=True)
