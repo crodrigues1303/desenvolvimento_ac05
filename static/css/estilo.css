@@ -153,3 +153,7 @@ label.copyright {
 .txt-sobre-2 {
     padding: 10px;
 }
+
+.modal-texto {
+    text-align: center; 
+}

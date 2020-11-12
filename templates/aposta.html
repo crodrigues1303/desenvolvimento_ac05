@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script src="/static/js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/css/estilo.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Aposta</title>
 </head>
 <body>
@@ -56,8 +57,28 @@
                 <OPTION>Stipe Miočić
             </SELECT></td></tr></br></br>
         </tr>
+        <!---
         <input type="submit" value="Salvar"/>
-        <input type="reset" value="Limpar"/><br/>
+        <input type="reset" value="Limpar"/><br/> -->
+            <button onclick="document.getElementById('id01').style.display='block'"
+            class="w3-button" type="submit" value="Salvar">Salvar</button>
+            <button class="w3-button" type="reset" value="Limpar">Limpar</button>
+
+            <!-- The Modal -->
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                        <div>
+                            <p>Olá {Nome}.</p>
+                            <p>Você apostou no lutador {} com valor da aposta de R${valor}</p>
+                            <p>Possível retorno de R${valor}</p>
+                            <p>BOA SORTE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>    
     </center>
 </body>
