@@ -41,3 +41,8 @@ function mouseSobreOver () {
 function mouseSobreOut () {
     document.getElementById("sobre").style.color = "#FFFF";
 }
+
+alert {
+    "ola"
+    
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="/static/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilo.css" />
+    <title>Lista de Apostas</title>
+</head>
+<body>
+    <div class="linksHeader">
+        <div>
+            <a href="atleta" class="links" id="atletas" onmouseover="mouseAtletaOver();" onmouseout="mouseAtletaOut();">ATLETAS</a>
+        </div>
+        <div>
+            <a href="redes-sociais" class="links" id="redes" onmouseover="mouseRedesOver();" onmouseout="mouseRedesOut();">REDES SOCIAL</a>
+        </div>
+        <div>
+            <a href="/" class="links" id="ufc" onmouseover="mouseUfcOver();" onmouseout="mouseUfcOut();">UFC</a>
+        </div>
+        <div>
+            <a href="aposta" class="links" id="aposta" onmouseover="mouseApostaOver();" onmouseout="mouseApostaOut();">APOSTA</a>
+        </div>
+        <div >
+            <a href="sobre" class="links"  id="sobre" onmouseover="mouseSobreOver();" onmouseout="mouseSobreOut();">SOBRE</a>
+        </div>
+    </div> 
+    <center><h1>Lista de Apostas</h1><br>
+        <table class="tabela-lista">
+            <tr>
+                <td>ID</td>
+                <td>NOME</td>
+                <td>TELEFONE</td>
+                <td>EMAIL</td>
+                <td>VALOR APOSTA</td>
+                <td>LUTADOR</td>
+            </tr>
+            {% for row in ufc %}
+                <tr>
+                    <td>{{ row._id }}</td>
+                    <td>{{ row.nome }}</td>
+                    <td>{{ row.telefone }}</td>
+                    <td>{{ row.email }}</td>
+                    <td>{{ row.valor_aposta }}</td>
+                    <td>{{ row.lutador }}</td>
+                </tr>
+            {% endfor %}       
+        </table>
+
+    </center>
+</body>
+</html>

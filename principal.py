@@ -11,23 +11,19 @@ app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:master4721@localhost
 db = SQLAlchemy(app)
 
 class ufc(db.Model): 
-    __tablename__='cliente'
+    __tablename__ = 'apostas'
     _id = db.Column(db.Integer,primary_key=True,autoincrement=True)
-    nome = db.Column(db.String(50))
+    nome = db.Column(db.String(100))
     telefone = db.Column(db.String(20))
     email = db.Column(db.String(120))
-    valor_aposta = db.Column(db.Integer)
-    def __init__(self, nome, telefone, email, valor_aposta):
+    valor_aposta = db.Column(db.Float)
+    lutador = db.Column(db.String(60))
+    def __init__(self, nome, telefone, email, valor_aposta,lutador):
         self.nome = nome
         self.telefone = telefone
         self.email = email
         self.valor_aposta = valor_aposta
-
-    __tablename__='lutadores'
-    _id = db.Column(db.Integer,primary_key=True,autoincrement=True)
-    nome = db.Column(db.String(50))
-    def __init__(self,nome):
-        self.nome = nome
+        self.lutador = lutador
 
 db.create_all()
 
@@ -76,4 +72,26 @@ def sobre():
 def aposta():
     return render_template("aposta.html") 
 
-app.run(debug=True)
+@app.route("/cadastrar",methods=['GET', 'POST'])
+def cadastrar():
+    if request.method =="POST":
+        nome = (request.form.get("nome"))
+        telefone = (request.form.get("telefone"))
+        email = (request.form.get("email"))
+        valor_aposta = (request.form.get("valor_aposta"))
+        lutador = (request.form.get("lutador"))
+        if nome:
+            f = ufc(nome,telefone,email,valor_aposta,lutador)
+            db.session.add(f)
+            db.session.commit()
+    return redirect(url_for("listar"))
+
+@app.route("/listar")
+def listar():
+    listas = ufc.query.all()
+    return render_template("listaaposta.html", ufc=listas)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+teste = ufc.query.all()

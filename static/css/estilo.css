@@ -157,3 +157,8 @@ label.copyright {
 .modal-texto {
     text-align: center; 
 }
+
+.tabela-lista {
+    text-align: center;
+    border-style: dotted;
+}
